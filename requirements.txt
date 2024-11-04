@@ -1,0 +1,6 @@
+torch                # PyTorch for VITS
+librosa              # For audio processing
+pydub                # For audio format conversion
+websockets           # For WebSocket server (deployment)
+numpy                # For numerical operations
+sox                  # For audio processing 

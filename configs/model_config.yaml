@@ -1,0 +1,11 @@
+# configs/model_config.yaml
+
+# Paths for data and models
+data_path: "data/dataset"
+checkpoint_path: "models/checkpoints"
+final_model_path: "models/final/model.pth"
+
+# Training parameters
+epochs: 100
+batch_size: 32
+learning_rate: 0.001
