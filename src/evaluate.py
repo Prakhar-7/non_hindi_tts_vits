@@ -1,13 +1,14 @@
+import os
 import torch
 import yaml
-from vits.model import VITSModel
+from models.vits_repo import VITS 
 from src.train import AudioDataset
 from torch.utils.data import DataLoader
 import numpy as np
 
 def evaluate_model(config):
     
-    model = VITSModel(config)
+    model = VITS(config)
     model.load_state_dict(torch.load(config['final_model_path']))
     model.eval()
 

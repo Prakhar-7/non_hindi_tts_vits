@@ -3,7 +3,7 @@ import torch
 import yaml
 import os
 from torch.utils.data import DataLoader, Dataset
-from vits.model import VITSModel  # Assuming VITS is already cloned and model is available
+from models.vits_repo import VITS  
 
 class AudioDataset(Dataset):
     def __init__(self, data_dir):
@@ -21,7 +21,7 @@ def train_model(config):
     dataset = AudioDataset(os.path.join(config['data_path'], "processed"))
     dataloader = DataLoader(dataset, batch_size=config['batch_size'], shuffle=True)
 
-    model = VITSModel(config)
+    model = VITS(config)
     optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
 
     for epoch in range(config['epochs']):

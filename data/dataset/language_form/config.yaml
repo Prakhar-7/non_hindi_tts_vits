@@ -1,0 +1,13 @@
+dataset_name: "language_form"
+data_path: "dataset/language_form"
+audio_format: ".wav"
+sample_rate: 22050
+frame_shift: 256
+frame_length: 1024
+num_mels: 80
+text_cleaners: ["english_cleaners"]
+
+audio_path: "dataset/language_form/audio"
+transcript_path: "dataset/language_form/transcripts"
+
+processed_path: "dataset/language_form/processed"

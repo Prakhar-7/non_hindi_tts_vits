@@ -2,7 +2,7 @@ import websockets
 import asyncio
 import yaml
 import torch
-from vits.model import VITSModel
+from models.vits_repo import VITS 
 
 async def handle_client(websocket, path, model):
     async for message in websocket:
@@ -12,7 +12,7 @@ async def handle_client(websocket, path, model):
 
 async def main(config):
     # Load model
-    model = VITSModel(config)
+    model = VITS(config)
     model.load_state_dict(torch.load(config['final_model_path']))
     model.eval()
 
